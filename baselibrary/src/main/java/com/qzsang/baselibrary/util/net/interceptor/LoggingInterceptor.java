@@ -80,7 +80,7 @@ public final class LoggingInterceptor extends InterceptorImpl {
         if (InterceptorUtil.requestTypeIsMultipart(request))
             return false;
 
-        return true;
+        return super.isIntercept(request);
     }
 
     @Override
@@ -88,7 +88,7 @@ public final class LoggingInterceptor extends InterceptorImpl {
         if (response.body() == null || response.body().contentLength() > MAX_RP_BODY_PRINT_SIZE || response.body().source() == null)
             return false;
 
-        return true;
+        return super.isIntercept(response);
     }
 
 }

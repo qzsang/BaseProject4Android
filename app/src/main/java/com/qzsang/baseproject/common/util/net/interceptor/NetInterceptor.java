@@ -94,7 +94,7 @@ public class NetInterceptor extends InterceptorImpl {
             return false;
         if (InterceptorUtil.requestTypeIsMultipart(request))
             return false;
-        return true;
+        return super.isIntercept(request);
     }
 
     @Override
@@ -102,6 +102,6 @@ public class NetInterceptor extends InterceptorImpl {
         if (response.body() == null || response.body().source() == null)
             return false;
 
-        return true;
+        return super.isIntercept(response);
     }
 }

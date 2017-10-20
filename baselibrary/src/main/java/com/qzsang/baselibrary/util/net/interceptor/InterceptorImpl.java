@@ -47,7 +47,7 @@ public abstract class InterceptorImpl implements Interceptor {
      * @return
      */
     protected boolean isIntercept (Request request) {
-        return false;
+        return true;
     }
 
     /**
@@ -56,6 +56,7 @@ public abstract class InterceptorImpl implements Interceptor {
      * @return
      */
     protected boolean isIntercept (Response response) {
-        return false;
+
+        return InterceptorUtil.isIntercept4Url(response);
     }
 }

@@ -175,6 +175,11 @@ public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
                                 @Override
                                 public void onError(Throwable e) {
                                     super.onError(e);
+                                }
+
+                                @Override
+                                public void onNext(String response) {
+                                    super.onNext(response);
                                     toast("上传成功");
                                 }
                             });

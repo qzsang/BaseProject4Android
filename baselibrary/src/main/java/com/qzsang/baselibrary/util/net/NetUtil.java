@@ -5,6 +5,7 @@ package com.qzsang.baselibrary.util.net;
 import com.qzsang.baselibrary.util.net.adapter.RxAndroidCallAdapterFactory;
 import com.qzsang.baselibrary.util.net.converter.StringConverterFactory;
 import com.qzsang.baselibrary.util.net.interceptor.LoggingInterceptor;
+import com.qzsang.baselibrary.util.net.interceptor.StartInterceptor;
 
 import java.util.concurrent.TimeUnit;
 
@@ -41,6 +42,7 @@ public class NetUtil {
                     .readTimeout(TIMEOUT_READ, TimeUnit.SECONDS) //time out
                     .connectTimeout(TIMEOUT_CONNECTION, TimeUnit.SECONDS)
                     .writeTimeout(TIMEOUT_WRITE, TimeUnit.SECONDS)
+                    .addInterceptor(new StartInterceptor())
                     .addInterceptor(new LoggingInterceptor());
 
             if (interceptors != null) {
