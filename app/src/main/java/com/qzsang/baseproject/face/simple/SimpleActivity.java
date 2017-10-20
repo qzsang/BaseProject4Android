@@ -15,8 +15,11 @@ public class SimpleActivity extends BaseActivity<ActivitySimpleBinding> {
         setContentView(R.layout.activity_simple);
     }
 
-
     public void clickBtn (View view) {
         binding.tvContent.setText("文字已改变：" + (int)(Math.random()*1000));
     }
+
+
+
+
 }

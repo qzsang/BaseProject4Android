@@ -38,8 +38,4 @@ public interface SimpleService {
     @PUT("upload.do")
     Observable<String> upload(@Part MultipartBody.Part file);
 
-
-
-
-
 }
