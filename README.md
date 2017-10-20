@@ -1,5 +1,5 @@
 # BaseProject4Android
-baseProject4Android   为了快速开发而新建的一个基础项目  
+baseProject4Android   为了快速开发而新建的一个基础项目  （立志用最少的代码  完成业务需求）
 
 1、分享一波 databinding 简单封装后的  activity
 
