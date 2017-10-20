@@ -21,7 +21,7 @@ public class SimpleActivity extends BaseActivity<ActivitySimpleBinding> {
 
 
 ```
-简不简洁？次不刺激？   
+简不简洁？刺不刺激？   
 
 2、网络请求   经过简单封装后  返回的Observable  是在io线程进行请求，在ui线程进行响应 以下为简单示例 
 ```
@@ -81,3 +81,5 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<BPRViewHolder<ItemMainLis
     MyImageUtil.show(R.mipmap.ic_launcher, binding.ivLocalImage);
 ```
 只是简单封装了一层  为了后期的维护
+
+5、待续  还在开发中
