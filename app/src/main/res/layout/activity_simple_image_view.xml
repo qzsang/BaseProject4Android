@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.qzsang.baseproject.face.simple.SimpleImageViewActivity">
+
+
+
+        <ImageView
+            android:id="@+id/iv_net_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_local_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <Button
+            android:id="@+id/btn_show_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点我显示上面图片"
+            />
+    </LinearLayout>
+</layout>
