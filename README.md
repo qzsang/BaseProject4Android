@@ -25,15 +25,14 @@ public class SimpleActivity extends BaseActivity<ActivitySimpleBinding> {
 
 2、网络请求   经过简单封装后  返回的Observable  是在io线程进行请求，在ui线程进行响应 以下为简单示例 
 ```
-    simpleService
-        .getUser(rqUserBean)
-        .subscribe(new NetSubscriber<RpUserBean>() {
+     simpleService.getuser(rqUserBean.username, rqUserBean.pwd)
+        .compose(new SubscribeTransformer<RpUserBean>(mContext, new NetSubscriber<RpUserBean>() {
             @Override
             public void onNext(RpUserBean response) {
                 super.onNext(response);
-                //ui操作
+                binding.tvPostField.setText("post field response:" + response);
             }
-        });
+        }));
 
 ```
 
