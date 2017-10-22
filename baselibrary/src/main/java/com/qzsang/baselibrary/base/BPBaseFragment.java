@@ -11,6 +11,11 @@ import android.widget.Toast;
 
 import com.qzsang.baselibrary.util.databinding.DataBindingManageUtil;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import rx.Subscription;
+
 
 /**
  * Created by qzsang on 2017/5/10 0010.
@@ -47,6 +52,26 @@ public abstract class BPBaseFragment<E extends ViewDataBinding> extends Fragment
             toast.setText(string + "");
         }
         toast.show();
+
+    }
+
+
+    //订阅者管理
+    protected List<Subscription> subscriptions = new ArrayList<>();
+    public void addSubscription (Subscription subscription) {
+        if (subscription != null)
+            subscriptions.add(subscription);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        for (Subscription subscription : subscriptions) {
+            if (subscription != null && !subscription.isUnsubscribed()) {
+                subscription.unsubscribe();
+            }
+        }
+        subscriptions.clear();
 
     }
 }

@@ -1,4 +1,4 @@
-package com.qzsang.baseproject.common.net.bean.rq;
+package com.qzsang.baseproject.common.bean.rq;
 
 import com.qzsang.baseproject.common.base.BaseRqBean;
 

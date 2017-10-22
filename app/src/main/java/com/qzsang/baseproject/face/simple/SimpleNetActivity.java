@@ -7,15 +7,14 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.view.View;
-import android.widget.Toast;
 
 import com.qzsang.baselibrary.util.FileUtil;
-import com.qzsang.baselibrary.util.LogUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
-import com.qzsang.baseproject.common.base.NetSubscriber;
-import com.qzsang.baseproject.common.net.bean.rp.RpUserBean;
-import com.qzsang.baseproject.common.net.bean.rq.RqUserBean;
+import com.qzsang.baseproject.common.rx.SubscribeTransformer;
+import com.qzsang.baseproject.common.rx.NetSubscriber;
+import com.qzsang.baseproject.common.bean.rp.RpUserBean;
+import com.qzsang.baseproject.common.bean.rq.RqUserBean;
 import com.qzsang.baseproject.common.net.service.SimpleService;
 import com.qzsang.baseproject.common.util.net.MyNetUtil;
 import com.qzsang.baseproject.databinding.ActivitySimpleNetBinding;
@@ -33,8 +32,6 @@ import okhttp3.ResponseBody;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
-
-import static android.R.attr.path;
 
 public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
 
@@ -66,23 +63,37 @@ public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
             public void onClick(View v) {
 
                 simpleService.getuser(rqUserBean.username, rqUserBean.pwd)
-                        .subscribe(new NetSubscriber<RpUserBean>() {
+                        .compose(new SubscribeTransformer<RpUserBean>(mContext, new NetSubscriber<RpUserBean>() {
+                            @Override
+                            public void onError(Throwable e) {
+                                super.onError(e);
+                            }
+
                             @Override
                             public void onNext(RpUserBean response) {
                                 super.onNext(response);
                                 binding.tvPostField.setText("post field response:" + response);
                             }
+                        }));
 
-                        });
 
                 simpleService.getUser(rqUserBean)
-                        .subscribe(new NetSubscriber<RpUserBean>() {
+                        .compose(new SubscribeTransformer<RpUserBean>(mContext, new NetSubscriber<RpUserBean>() {
+
                             @Override
                             public void onNext(RpUserBean response) {
                                 super.onNext(response);
                                 binding.tvPostBody.setText("post body response:" + response);
                             }
-                        });
+
+                            @Override
+                            public void onError(Throwable e) {
+                                super.onError(e);
+                            }
+
+                        }));
+
+
 
 
             }
@@ -102,14 +113,14 @@ public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
                             }
                         })
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(new NetSubscriber<Boolean>() {
+                        .compose(new SubscribeTransformer<Boolean>(mContext, new NetSubscriber<Boolean>() {
                             @Override
                             public void onNext(Boolean response) {
                                 super.onNext(response);
-
                                 toast("result:" + response);
                             }
-                        });
+                        }));
+//
             }
         });
 
@@ -117,7 +128,7 @@ public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
             @Override
             public void onClick(View v) {
 
-                AndPermission.with(mActivity)
+                AndPermission.with(mContext)
                         .requestCode(100)
                         .permission(Permission.STORAGE)
                         .callback(new PermissionListener() {
@@ -171,18 +182,14 @@ public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
                             MultipartBody.Part.createFormData("file", file.getName(), requestFile);
 
                     simpleService.upload(body)
-                            .subscribe(new NetSubscriber<String>() {
-                                @Override
-                                public void onError(Throwable e) {
-                                    super.onError(e);
-                                }
-
+                            .compose(new SubscribeTransformer<String>(mContext, new NetSubscriber<String>() {
                                 @Override
                                 public void onNext(String response) {
                                     super.onNext(response);
                                     toast("上传成功");
                                 }
-                            });
+                            }));
+//
 
 
                 }

@@ -1,4 +1,4 @@
-package com.qzsang.baseproject.common.base;
+package com.qzsang.baseproject.common.rx;
 
 import com.qzsang.baselibrary.util.LogUtil;
 

@@ -48,7 +48,7 @@ public class FileUtil {
 
                 fileSizeDownloaded += read;
 
-//                LogUtil.d("FileUtil writeResponseBodyToDisk", "file download: " + fileSizeDownloaded + " of " + fileSize);
+                LogUtil.d("FileUtil writeResponseBodyToDisk", "file download: " + fileSizeDownloaded + " of " + fileSize);
             }
 
             outputStream.flush();

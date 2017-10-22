@@ -1,8 +1,8 @@
 package com.qzsang.baseproject.common.net.service;
 
 import com.qzsang.baselibrary.util.net.interceptor.InterceptorUtil;
-import com.qzsang.baseproject.common.net.bean.rp.RpUserBean;
-import com.qzsang.baseproject.common.net.bean.rq.RqUserBean;
+import com.qzsang.baseproject.common.bean.rp.RpUserBean;
+import com.qzsang.baseproject.common.bean.rq.RqUserBean;
 
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
@@ -10,7 +10,6 @@ import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.HEAD;
 import retrofit2.http.Headers;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;

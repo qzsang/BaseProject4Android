@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     @Override
     protected void init() {
         super.init();
-        binding.rvList.setLayoutManager(new LinearLayoutManager(mActivity));
+        binding.rvList.setLayoutManager(new LinearLayoutManager(mContext));
 
 
         binding.rvList.setAdapter(new RecyclerViewAdapter());

@@ -1,4 +1,4 @@
-package com.qzsang.baseproject.common.net.bean.rp;
+package com.qzsang.baseproject.common.bean.rp;
 
 import com.qzsang.baseproject.common.base.BaseRpBean;
 

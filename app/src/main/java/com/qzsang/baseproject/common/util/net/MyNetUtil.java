@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
  */
 
 public class MyNetUtil {
-    public final static String BASE_URL = "http://192.168.2.61:8080";
+    public final static String BASE_URL = "http://192.168.0.101:8080";
 
     private static Retrofit retrofit;
 
