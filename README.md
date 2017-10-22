@@ -23,7 +23,7 @@ public class SimpleActivity extends BaseActivity<ActivitySimpleBinding> {
 ```
 简不简洁？刺不刺激？   
 
-2、网络请求   经过简单封装后  返回的Observable  是在io线程进行请求，在ui线程进行响应 以下为简单示例 
+2、网络请求   经过简单封装后  返回的Observable  是在io线程进行请求，在ui线程进行响应 并且任务和activity或fragment的生命周期绑定 以下为简单示例 
 ```
      simpleService.getuser(rqUserBean.username, rqUserBean.pwd)
         .compose(new SubscribeTransformer<RpUserBean>(mContext, new NetSubscriber<RpUserBean>() {
