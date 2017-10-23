@@ -1,6 +1,5 @@
 package com.qzsang.baseproject.face;
 
-import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.util.Pair;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,13 +7,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.qzsang.baselibrary.base.BPRViewHolder;
+import com.qzsang.baselibrary.base.BRViewHolder;
 import com.qzsang.baselibrary.util.view.ViewHolderUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baseproject.databinding.ActivityMainBinding;
 import com.qzsang.baseproject.databinding.ItemMainListBinding;
 import com.qzsang.baseproject.face.simple.SimpleActivity;
+import com.qzsang.baseproject.face.simple.SimpleDialogActivity;
 import com.qzsang.baseproject.face.simple.SimpleFragmentActivity;
 import com.qzsang.baseproject.face.simple.SimpleImageViewActivity;
 import com.qzsang.baseproject.face.simple.SimpleListActivity;
@@ -33,6 +33,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
             new Pair("viewholder for recyclerView", "该页面就是"),
             new Pair("ImageView", SimpleImageViewActivity.class),
             new Pair("net", SimpleNetActivity.class),
+            new Pair("dialog", SimpleDialogActivity.class),
     };
 
     @Override
@@ -56,18 +57,18 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     /**
      * 类中类的写法并不规范  这里只是演示用法
      */
-    class RecyclerViewAdapter extends RecyclerView.Adapter<BPRViewHolder<ItemMainListBinding>>{
+    class RecyclerViewAdapter extends RecyclerView.Adapter<BRViewHolder<ItemMainListBinding>>{
 
 
         @Override
-        public BPRViewHolder<ItemMainListBinding> onCreateViewHolder(ViewGroup parent, int viewType) {
+        public BRViewHolder<ItemMainListBinding> onCreateViewHolder(ViewGroup parent, int viewType) {
 
             return ViewHolderUtil.inflate4RV(R.layout.item_main_list, parent);
         }
 
 
         @Override
-        public void onBindViewHolder(BPRViewHolder<ItemMainListBinding> holder, final int position) {
+        public void onBindViewHolder(BRViewHolder<ItemMainListBinding> holder, final int position) {
             holder.binding.tvContent.setText(items[position].first + "");
 
             holder.binding.tvContent.setOnClickListener(new View.OnClickListener() {

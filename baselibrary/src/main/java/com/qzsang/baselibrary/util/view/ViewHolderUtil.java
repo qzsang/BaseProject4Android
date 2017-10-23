@@ -1,11 +1,10 @@
 package com.qzsang.baselibrary.util.view;
 
 import android.support.annotation.LayoutRes;
-import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.qzsang.baselibrary.base.BPRViewHolder;
-import com.qzsang.baselibrary.base.BPViewHolder;
+import com.qzsang.baselibrary.base.BRViewHolder;
+import com.qzsang.baselibrary.base.BViewHolder;
 
 /**
  * Created by quezhongsang on 2017/10/19.
@@ -16,34 +15,34 @@ public class ViewHolderUtil {
 
 
 
-    // for BPViewHolder  S
+    // for BViewHolder  S
 
-    public static BPViewHolder inflate(@LayoutRes int resource) {
+    public static BViewHolder inflate(@LayoutRes int resource) {
 
-        return  new BPViewHolder(resource);
+        return  new BViewHolder(resource);
     }
 
-    public static BPViewHolder inflateAndSetTag(@LayoutRes int resource) {
-        BPViewHolder viewHolder = new BPViewHolder(resource);
+    public static BViewHolder inflateAndSetTag(@LayoutRes int resource) {
+        BViewHolder viewHolder = new BViewHolder(resource);
         viewHolder.binding.getRoot().setTag(viewHolder);
         return viewHolder;
     }
 
-    // for BPViewHolder  E
+    // for BViewHolder  E
 
 
 
-    // for BPRViewHolder  S
-    public static BPRViewHolder inflate4RV(@LayoutRes int resource) {
+    // for BRViewHolder  S
+    public static BRViewHolder inflate4RV(@LayoutRes int resource) {
 
         return  inflate4RV(resource, null);
     }
 
-    public static BPRViewHolder inflate4RV(@LayoutRes int resource, ViewGroup viewGroup) {
+    public static BRViewHolder inflate4RV(@LayoutRes int resource, ViewGroup viewGroup) {
 
-        return  new BPRViewHolder<>(ViewUtil.inflate( resource, viewGroup));
+        return  new BRViewHolder<>(ViewUtil.inflate( resource, viewGroup));
     }
-    // for BPRViewHolder  E
+    // for BRViewHolder  E
 
 
 

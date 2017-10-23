@@ -4,14 +4,14 @@ import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.qzsang.baselibrary.base.BPBaseActivity;
+import com.qzsang.baselibrary.base.BBaseActivity;
 import com.qzsang.baseproject.common.rx.SubscribeTransformer;
 
 /**
  * Created by quezhongsang on 2017/10/18.
  */
 
-public class BaseActivity<E extends ViewDataBinding> extends BPBaseActivity<E>
+public class BaseActivity<E extends ViewDataBinding> extends BBaseActivity<E>
         implements SubscribeTransformer.SubscriptionManager {
 
     protected BaseActivity mContext;

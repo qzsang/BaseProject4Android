@@ -5,7 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.qzsang.baselibrary.base.BPViewHolder;
+import com.qzsang.baselibrary.base.BViewHolder;
 import com.qzsang.baselibrary.util.view.ViewHolderUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
@@ -43,11 +43,11 @@ public class SimpleListActivity extends BaseActivity<ActivitySimpleListBinding> 
 
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
-                BPViewHolder<ItemMainListBinding> viewHolder = null;
+                BViewHolder<ItemMainListBinding> viewHolder = null;
                 if (convertView == null) {
                     viewHolder = ViewHolderUtil.inflateAndSetTag(R.layout.item_main_list);
                 } else {
-                    viewHolder = (BPViewHolder<ItemMainListBinding>) convertView.getTag();
+                    viewHolder = (BViewHolder<ItemMainListBinding>) convertView.getTag();
                 }
 
                 viewHolder.binding.tvContent.setText("我是listview的第" + position + "个item");
