@@ -24,7 +24,7 @@ public class SimpleFragmentActivity extends BaseActivity<ActivitySimpleFragmentB
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fl_content, new SimpleFragment());
+        fragmentTransaction.add(R.id.fl_content, new SimpleFragment());
         fragmentTransaction.commit();
 
 

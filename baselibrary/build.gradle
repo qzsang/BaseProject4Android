@@ -45,4 +45,7 @@ dependencies {
 
     //https://github.com/yanzhenjie/AndPermission/blob/master/README-CN.md   权限管理
     compile 'com.yanzhenjie:permission:1.1.2'
+
+    //https://github.com/gyf-dev/ImmersionBar  状态栏
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
 }

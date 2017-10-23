@@ -17,28 +17,37 @@ public class DataBindingManageUtil {
 
 
     public static <T extends ViewDataBinding> T inflate(LayoutInflater inflater, int layoutId) {
-        return inflate(inflater, layoutId, null);
+        return inflate(inflater, layoutId, null, false);
     }
 
     public static <T extends ViewDataBinding> T inflate(Context context, int layoutId) {
-        return inflate( LayoutInflater.from(context), layoutId, null);
+        return inflate( LayoutInflater.from(context), layoutId, null, false);
     }
 
     public static <T extends ViewDataBinding> T inflate(Context context, int layoutId,
                                                         @Nullable ViewGroup parent) {
 
-        return inflate(LayoutInflater.from(context), layoutId, parent);
+        return inflate(LayoutInflater.from(context), layoutId, parent, parent != null);
     }
+
+
+
+    public static <T extends ViewDataBinding> T inflate(Context context, int layoutId,
+                                                        @Nullable ViewGroup parent, boolean attachToParent) {
+
+        return inflate(LayoutInflater.from(context), layoutId, parent, attachToParent);
+    }
+
 
     public static <T extends ViewDataBinding> T inflate(LayoutInflater inflater, int layoutId,
-                                                        @Nullable ViewGroup parent) {
+                                                        @Nullable ViewGroup parent, boolean attachToParent) {
 
-        return DataBindingUtil.inflate(inflater, layoutId, parent, parent != null);
+        return DataBindingUtil.inflate(inflater, layoutId, parent, attachToParent);
     }
 
-    public static <T extends ViewDataBinding> T setContentView(Activity activity, int layoutId) {
-        return DataBindingUtil.setContentView(activity,layoutId);
-    }
+//    public static <T extends ViewDataBinding> T setContentView(Activity activity, int layoutId) {
+//        return DataBindingUtil.setContentView(activity,layoutId);
+//    }
 
     public static <T extends ViewDataBinding> T bind(View root) {
         return DataBindingUtil.bind(root);

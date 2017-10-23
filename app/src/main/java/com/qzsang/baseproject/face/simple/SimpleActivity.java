@@ -3,6 +3,7 @@ package com.qzsang.baseproject.face.simple;
 import android.os.Bundle;
 import android.view.View;
 
+import com.qzsang.baselibrary.util.LogUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baseproject.databinding.ActivitySimpleBinding;
