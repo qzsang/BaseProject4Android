@@ -15,7 +15,6 @@ public class AppUtil {
 
     public static void init (Application application) {
         AppUtil.application = application;
-        AppGlideModule appGlideModule;
     }
 
 
