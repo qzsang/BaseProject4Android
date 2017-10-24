@@ -82,7 +82,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<BPRViewHolder<ItemMainLis
 ```
 只是简单封装了一层  为了后期的维护
 
-5、其他的直接看源码吧。。MainActivity  里面都有一一对应的 例子  上列表  如下
+5、其他的直接看源码吧。。MainActivity  里面都有一一对应的例子  ，列表如下
 ```
  public Pair[] items = new Pair[] {
             new Pair("activity", SimpleActivity.class),
