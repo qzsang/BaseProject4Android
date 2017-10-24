@@ -6,8 +6,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- sdcard读权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- the following two permissions are required if you want to take photo in selector -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <!-- sdcard写权限 -->
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -29,7 +30,8 @@
         <activity android:name=".face.simple.SimpleListActivity" />
         <activity android:name=".face.simple.SimpleImageViewActivity" />
         <activity android:name=".face.simple.SimpleNetActivity" />
-        <activity android:name=".face.simple.SimpleDialogActivity"></activity>
+        <activity android:name=".face.simple.SimpleDialogActivity" />
+        <activity android:name=".face.simple.SimpleImageSelActivity"></activity>
     </application>
 
 </manifest>

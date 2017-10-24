@@ -25,8 +25,12 @@ public class SimpleImageViewActivity extends BaseActivity<ActivitySimpleImageVie
         binding.btnShowImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyImageUtil.show("http://i.imgur.com/DvpvklR.png", binding.ivNetImage);
-                MyImageUtil.show(R.mipmap.ic_launcher, binding.ivLocalImage);
+                MyImageUtil.with(mContext)
+                        .load("http://i.imgur.com/DvpvklR.png")
+                        .into(binding.ivNetImage);
+                MyImageUtil.with(mContext)
+                        .load(R.mipmap.ic_launcher)
+                        .into(binding.ivLocalImage);
 
             }
         });

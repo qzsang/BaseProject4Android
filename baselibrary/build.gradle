@@ -31,6 +31,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
@@ -39,13 +40,22 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    //图片加载框架
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+
+    //https://github.com/bumptech/glide 图片加载框架
+    compile 'com.github.bumptech.glide:glide:4.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
 
     //https://github.com/yanzhenjie/AndPermission/blob/master/README-CN.md   权限管理
     compile 'com.yanzhenjie:permission:1.1.2'
 
     //https://github.com/gyf-dev/ImmersionBar  状态栏
     compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+
+    //https://github.com/LuckSiege/PictureSelector  图片选择框架
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.3'
+
+
+
+
 }

@@ -21,6 +21,4 @@ public class SimpleActivity extends BaseActivity<ActivitySimpleBinding> {
     }
 
 
-
-
 }

@@ -16,6 +16,7 @@ import com.qzsang.baseproject.databinding.ItemMainListBinding;
 import com.qzsang.baseproject.face.simple.SimpleActivity;
 import com.qzsang.baseproject.face.simple.SimpleDialogActivity;
 import com.qzsang.baseproject.face.simple.SimpleFragmentActivity;
+import com.qzsang.baseproject.face.simple.SimpleImageSelActivity;
 import com.qzsang.baseproject.face.simple.SimpleImageViewActivity;
 import com.qzsang.baseproject.face.simple.SimpleListActivity;
 import com.qzsang.baseproject.face.simple.SimpleNetActivity;
@@ -26,14 +27,14 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
     public Pair[] items = new Pair[] {
             new Pair("activity", SimpleActivity.class),
-
             new Pair("fragment", SimpleFragmentActivity.class),
             new Pair("webActivity", SimpleWebActivity.class),
             new Pair("viewholder", SimpleListActivity.class),
             new Pair("viewholder for recyclerView", "该页面就是"),
             new Pair("ImageView", SimpleImageViewActivity.class),
             new Pair("net", SimpleNetActivity.class),
-            new Pair("dialog", SimpleDialogActivity.class),
+            new Pair("alertDialog", SimpleDialogActivity.class),
+            new Pair("图片选择", SimpleImageSelActivity.class)
     };
 
     @Override

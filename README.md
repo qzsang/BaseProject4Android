@@ -76,9 +76,24 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<BPRViewHolder<ItemMainLis
 
 4、图片加载   
 ```
-    MyImageUtil.show("http://i.imgur.com/DvpvklR.png", binding.ivNetImage);
-    MyImageUtil.show(R.mipmap.ic_launcher, binding.ivLocalImage);
+     MyImageUtil.with(mContext)
+        .load("http://i.imgur.com/DvpvklR.png")
+        .into(binding.ivNetImage);
 ```
 只是简单封装了一层  为了后期的维护
 
-5、待续  还在开发中
+5、其他的直接看源码吧。。MainActivity  里面都有一一对应的 例子  上列表  如下
+```
+ public Pair[] items = new Pair[] {
+            new Pair("activity", SimpleActivity.class),
+            new Pair("fragment", SimpleFragmentActivity.class),
+            new Pair("webActivity", SimpleWebActivity.class),
+            new Pair("viewholder", SimpleListActivity.class),
+            new Pair("viewholder for recyclerView", "该页面就是"),
+            new Pair("ImageView", SimpleImageViewActivity.class),
+            new Pair("net", SimpleNetActivity.class),
+            new Pair("alertDialog", SimpleDialogActivity.class),
+            new Pair("图片选择", SimpleImageSelActivity.class)
+    };
+
+```

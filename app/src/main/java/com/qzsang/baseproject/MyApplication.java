@@ -3,6 +3,7 @@ package com.qzsang.baseproject;
 import android.app.Application;
 
 import com.qzsang.baselibrary.util.AppUtil;
+import com.qzsang.baselibrary.util.ImgSelUtil;
 import com.qzsang.baseproject.common.util.MyImageUtil;
 import com.qzsang.baseproject.common.util.net.MyNetUtil;
 
@@ -26,5 +27,8 @@ public class MyApplication extends Application {
         AppUtil.init(instance);
         MyNetUtil.init();
         MyImageUtil.init();
+        ImgSelUtil.init();
+
+
     }
 }
