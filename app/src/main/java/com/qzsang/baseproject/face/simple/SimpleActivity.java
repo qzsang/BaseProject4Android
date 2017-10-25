@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.qzsang.baselibrary.util.LogUtil;
+import com.qzsang.baseproject.BuildConfig;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baseproject.databinding.ActivitySimpleBinding;
@@ -17,7 +18,8 @@ public class SimpleActivity extends BaseActivity<ActivitySimpleBinding> {
     }
 
     public void clickBtn (View view) {
-        binding.tvContent.setText("文字已改变：" + (int)(Math.random()*1000));
+        binding.tvContent.setText("文字已改变：" + (int)(Math.random()*1000) + " BuildConfig.DEBUG:" + BuildConfig.DEBUG);
+        LogUtil.i("clickBtn", "clickBtn");
     }
 
 
