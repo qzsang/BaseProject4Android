@@ -28,15 +28,13 @@ public class SimpleImageSelActivity extends BaseActivity<ActivitySimpleImageSelB
     @Override
     protected void init() {
         super.init();
-
-
     }
 
     public void onClick1 (View view) {
         imgSelUtil = new ImgSelUtil();
         imgSelUtil.startActivity(mContext, 1, new ImgSelUtil.CallBack() {
             @Override
-            public void onCallBack(List<LocalMedia> pathList) {
+            public void onCallBack(List<String> pathList) {
                 showImages(pathList);
             }
         });
@@ -48,7 +46,7 @@ public class SimpleImageSelActivity extends BaseActivity<ActivitySimpleImageSelB
         imgSelUtil = new ImgSelUtil();
         imgSelUtil.startActivity(mContext, 3, new ImgSelUtil.CallBack() {
             @Override
-            public void onCallBack(List<LocalMedia> pathList) {
+            public void onCallBack(List<String> pathList) {
                 showImages(pathList);
 
             }
@@ -56,11 +54,10 @@ public class SimpleImageSelActivity extends BaseActivity<ActivitySimpleImageSelB
 
     }
 
-    public void showImages (List<LocalMedia> pathList) {
+    public void showImages (List<String> pathList) {
         binding.tvTxt.setText("");
         binding.llImgs.removeAllViews();
-        for (LocalMedia localMedia : pathList) {
-            String path = ImgSelUtil.getPath(localMedia);
+        for (String path : pathList) {
             binding.tvTxt.append(path + "\n");
             ImageView imageView = new ImageView(mContext);
             imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,400));

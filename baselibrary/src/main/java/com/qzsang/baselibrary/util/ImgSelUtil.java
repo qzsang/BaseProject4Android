@@ -9,6 +9,7 @@ import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.tools.PictureFileUtils;
 import com.qzsang.baselibrary.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
@@ -81,8 +82,11 @@ public class ImgSelUtil {
         if (requestCode == PictureConfig.CHOOSE_REQUEST && resultCode == RESULT_OK && data != null) {
             List<LocalMedia> pathList = PictureSelector.obtainMultipleResult(data);
             if (callBack != null && pathList != null && pathList.size() != 0) {
-
-                callBack.onCallBack(pathList);
+                List<String> paths = new ArrayList<>();
+                for (LocalMedia localMedia : pathList) {
+                    paths.add(getPath(localMedia));
+                }
+                callBack.onCallBack(paths);
             }
         }
 
@@ -90,7 +94,7 @@ public class ImgSelUtil {
     }
 
 
-    public static String getPath (LocalMedia localMedia) {
+    private static String getPath (LocalMedia localMedia) {
         if (localMedia == null)
             return "";
         if (localMedia.isCompressed())
@@ -114,8 +118,9 @@ public class ImgSelUtil {
 
          * @param pathList
          */
-        void onCallBack (List<LocalMedia> pathList) ;
+        void onCallBack (List<String> pathList) ;
     }
+
 
 
 

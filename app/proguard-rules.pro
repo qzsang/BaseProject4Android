@@ -160,16 +160,16 @@
 
 ##################################################################################  以下是第三方库的  S
 
-#permission s
+## permission s
 -keepclassmembers class ** {
     @com.yanzhenjie.permission.PermissionYes <methods>;
 }
 -keepclassmembers class ** {
     @com.yanzhenjie.permission.PermissionNo <methods>;
 }
-#permission e
+## permission e
 
-# glide   s
+## glide   s
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public class * extends com.bumptech.glide.module.AppGlideModule
 -keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
@@ -179,26 +179,26 @@
 # for DexGuard only
 #-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
 
-# glide   e
+## glide   e
 
-#retrofit s
+##retrofit s
 -dontwarn okio.**
 -dontwarn javax.annotation.**
-#retrofit e
+##retrofit e
 
-#okhttp3 s
+##okhttp3 s
 #-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 -dontwarn okhttp3.**
 -dontwarn okio.**
 -dontwarn javax.annotation.**
 # A resource is loaded with a relative path so the package of this class must be preserved.
 -keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
-#okhttp3 e
+##okhttp3 e
 
 
 
 
-#PictureSelector 2.0    s
+##PictureSelector 2.0    s
 -keep class com.luck.picture.lib.** { *; }
 
 -dontwarn com.yalantis.ucrop**
@@ -241,9 +241,21 @@
 
 # for DexGuard only
 #-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
-#PictureSelector 2.0    e
+##PictureSelector 2.0    e
 
 
+## banner  s
+# glide 的混淆代码
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+# banner 的混淆代码
+-keep class com.youth.banner.** {
+    *;
+ }
+## banner  e
 
 
 ##################################################################################       第三方库的  E

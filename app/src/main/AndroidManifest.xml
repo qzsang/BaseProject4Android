@@ -31,7 +31,8 @@
         <activity android:name=".face.simple.SimpleImageViewActivity" />
         <activity android:name=".face.simple.SimpleNetActivity" />
         <activity android:name=".face.simple.SimpleDialogActivity" />
-        <activity android:name=".face.simple.SimpleImageSelActivity"></activity>
+        <activity android:name=".face.simple.SimpleImageSelActivity" />
+        <activity android:name=".face.simple.BannerActivity"></activity>
     </application>
 
 </manifest>

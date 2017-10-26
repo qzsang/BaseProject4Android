@@ -1,5 +1,6 @@
 # BaseProject4Android
 baseProject4Android   为了快速开发而新建的一个基础项目  （立志用最少的代码  完成业务需求）
+    现项目已加入了基础的配置：  multiDex、 混淆
 
 1、分享一波 databinding 简单封装后的  activity
 
@@ -85,15 +86,16 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<BPRViewHolder<ItemMainLis
 5、其他的直接看源码吧。。MainActivity  里面都有一一对应的例子  ，列表如下
 ```
  public Pair[] items = new Pair[] {
-            new Pair("activity", SimpleActivity.class),
-            new Pair("fragment", SimpleFragmentActivity.class),
-            new Pair("webActivity", SimpleWebActivity.class),
-            new Pair("viewholder", SimpleListActivity.class),
-            new Pair("viewholder for recyclerView", "该页面就是"),
-            new Pair("ImageView", SimpleImageViewActivity.class),
-            new Pair("net", SimpleNetActivity.class),
-            new Pair("alertDialog", SimpleDialogActivity.class),
-            new Pair("图片选择", SimpleImageSelActivity.class)
-    };
+             new Pair("activity", SimpleActivity.class),
+             new Pair("fragment", SimpleFragmentActivity.class),
+             new Pair("webActivity", SimpleWebActivity.class),
+             new Pair("viewholder", SimpleListActivity.class),
+             new Pair("viewholder for recyclerView", "该页面就是"),
+             new Pair("ImageView", SimpleImageViewActivity.class),
+             new Pair("net", SimpleNetActivity.class),
+             new Pair("alertDialog", SimpleDialogActivity.class),
+             new Pair("图片选择", SimpleImageSelActivity.class),
+             new Pair("Banner", BannerActivity.class)
+     };
 
 ```

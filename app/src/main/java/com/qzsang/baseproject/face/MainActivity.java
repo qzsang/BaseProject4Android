@@ -13,6 +13,7 @@ import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baseproject.databinding.ActivityMainBinding;
 import com.qzsang.baseproject.databinding.ItemMainListBinding;
+import com.qzsang.baseproject.face.simple.BannerActivity;
 import com.qzsang.baseproject.face.simple.SimpleActivity;
 import com.qzsang.baseproject.face.simple.SimpleDialogActivity;
 import com.qzsang.baseproject.face.simple.SimpleFragmentActivity;
@@ -34,7 +35,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
             new Pair("ImageView", SimpleImageViewActivity.class),
             new Pair("net", SimpleNetActivity.class),
             new Pair("alertDialog", SimpleDialogActivity.class),
-            new Pair("图片选择", SimpleImageSelActivity.class)
+            new Pair("图片选择", SimpleImageSelActivity.class),
+            new Pair("Banner", BannerActivity.class)
     };
 
     @Override
