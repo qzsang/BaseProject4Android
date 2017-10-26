@@ -21,6 +21,7 @@ import com.qzsang.baseproject.face.simple.SimpleImageSelActivity;
 import com.qzsang.baseproject.face.simple.SimpleImageViewActivity;
 import com.qzsang.baseproject.face.simple.SimpleListActivity;
 import com.qzsang.baseproject.face.simple.SimpleNetActivity;
+import com.qzsang.baseproject.face.simple.SimpleRxjavaActivity;
 import com.qzsang.baseproject.face.simple.SimpleWebActivity;
 
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
@@ -36,7 +37,8 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
             new Pair("net", SimpleNetActivity.class),
             new Pair("alertDialog", SimpleDialogActivity.class),
             new Pair("图片选择", SimpleImageSelActivity.class),
-            new Pair("Banner", BannerActivity.class)
+            new Pair("Banner", BannerActivity.class),
+            new Pair("rxjava", SimpleRxjavaActivity.class),
     };
 
     @Override

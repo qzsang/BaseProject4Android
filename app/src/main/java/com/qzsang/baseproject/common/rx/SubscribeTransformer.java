@@ -2,6 +2,7 @@ package com.qzsang.baseproject.common.rx;
 
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.Subscription;
 
 /**
@@ -10,11 +11,11 @@ import rx.Subscription;
 
 public class SubscribeTransformer<T> implements Observable.Transformer<T,Void> {
 
-    private NetSubscriber<T> netSubscriber;
+    private Subscriber<T> subscribe;
     private SubscriptionManager subscriptionManager;
 
-    public SubscribeTransformer(SubscriptionManager subscriptionManager, NetSubscriber<T> netSubscriber ) {
-       this.netSubscriber = netSubscriber;
+    public SubscribeTransformer(SubscriptionManager subscriptionManager, Subscriber<T> subscribe ) {
+       this.subscribe = subscribe;
         this.subscriptionManager = subscriptionManager;
     }
 
@@ -22,7 +23,7 @@ public class SubscribeTransformer<T> implements Observable.Transformer<T,Void> {
 
     @Override
     public Observable<Void> call(Observable<T> tObservable) {
-        Subscription subscription = tObservable.subscribe(netSubscriber);
+        Subscription subscription = tObservable.subscribe(subscribe);
 
         if (subscriptionManager != null) {
             subscriptionManager.addSubscription(subscription);

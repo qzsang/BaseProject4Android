@@ -95,7 +95,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<BPRViewHolder<ItemMainLis
              new Pair("net", SimpleNetActivity.class),
              new Pair("alertDialog", SimpleDialogActivity.class),
              new Pair("图片选择", SimpleImageSelActivity.class),
-             new Pair("Banner", BannerActivity.class)
+             new Pair("Banner", BannerActivity.class),
+             new Pair("rxjava", SimpleRxjavaActivity.class),
      };
 
 ```
