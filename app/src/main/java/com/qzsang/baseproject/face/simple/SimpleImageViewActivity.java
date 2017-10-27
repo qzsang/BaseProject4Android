@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.qzsang.baselibrary.util.image.ImageUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baseproject.common.util.MyImageUtil;
@@ -25,10 +26,10 @@ public class SimpleImageViewActivity extends BaseActivity<ActivitySimpleImageVie
         binding.btnShowImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyImageUtil.with(mContext)
+                ImageUtil.with(mContext)
                         .load("http://i.imgur.com/DvpvklR.png")
                         .into(binding.ivNetImage);
-                MyImageUtil.with(mContext)
+                ImageUtil.with(mContext)
                         .load(R.mipmap.ic_launcher)
                         .into(binding.ivLocalImage);
 

@@ -34,7 +34,7 @@ public class BannerActivity extends BaseActivity<ActivityBannerBinding> {
         binding.banner.setImageLoader(new ImageLoader() {
             @Override
             public void displayImage(Context context, Object o, ImageView imageView) {
-                MyImageUtil.with(context)
+                ImageUtil.with(context)
                         .load(o)
                         .into(imageView);
 

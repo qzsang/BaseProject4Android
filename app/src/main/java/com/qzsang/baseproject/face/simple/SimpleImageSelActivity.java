@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.luck.picture.lib.entity.LocalMedia;
+import com.qzsang.baselibrary.util.image.ImageUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baselibrary.util.ImgSelUtil;
@@ -61,7 +62,7 @@ public class SimpleImageSelActivity extends BaseActivity<ActivitySimpleImageSelB
             binding.tvTxt.append(path + "\n");
             ImageView imageView = new ImageView(mContext);
             imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,400));
-            MyImageUtil
+            ImageUtil
                     .with(mContext)
                     .load(path)
                     .into(imageView);

@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.qzsang.baselibrary.util.FileUtil;
+import com.qzsang.baselibrary.util.net.NetUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baseproject.common.rx.SubscribeTransformer;
@@ -48,7 +49,7 @@ public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
     @Override
     protected void init() {
         super.init();
-        simpleService = MyNetUtil.create(SimpleService.class);
+        simpleService = NetUtil.create(SimpleService.class);
 
         final RqUserBean rqUserBean = new RqUserBean();
         rqUserBean.username = "baseProject";

@@ -13,15 +13,10 @@ import retrofit2.Retrofit;
 public class MyNetUtil {
     public final static String BASE_URL = "http://192.168.0.101:8080";
 
-    private static Retrofit retrofit;
 
     public static void init () {
-        retrofit = NetUtil.init(BASE_URL, new NetInterceptor());
+         NetUtil.init(BASE_URL, new NetInterceptor());
     }
 
-
-    public static <T> T create(Class<?> clazz) {
-        return NetUtil.create(retrofit, clazz);
-    }
 
 }

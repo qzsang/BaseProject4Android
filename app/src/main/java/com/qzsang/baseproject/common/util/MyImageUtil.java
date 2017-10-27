@@ -27,19 +27,17 @@ public class MyImageUtil{
 
     }
 
-//    public static void show (Object source, ImageView imageView) {
-//        ImageUtil.show(source, imageView);
+
+
+//    public static ImageUtil.Request with(BaseActivity activity) {
+//        return ImageUtil.with(activity);
 //    }
-
-    public static ImageUtil.Request with(BaseActivity activity) {
-        return ImageUtil.with(activity);
-    }
-
-    public static ImageUtil.Request with(BaseFragment fragment) {
-        return ImageUtil.with(fragment);
-    }
-
-    public static ImageUtil.Request with(Context context) {
-        return ImageUtil.with(context);
-    }
+//
+//    public static ImageUtil.Request with(BaseFragment fragment) {
+//        return ImageUtil.with(fragment);
+//    }
+//
+//    public static ImageUtil.Request with(Context context) {
+//        return ImageUtil.with(context);
+//    }
 }

@@ -67,11 +67,15 @@ public class NetUtil {
         return mRetrofit;
     }
 
-    public static <T> T create(Retrofit retrofit, Class<?> clazz) {
+    private static <T> T create(Retrofit retrofit, Class<?> clazz) {
+        if (retrofit == null || clazz == null)
+            return null;
         return (T) retrofit.create(clazz);
     }
 
-
+    public static <T> T create(Class<?> clazz) {
+        return NetUtil.create(mRetrofit, clazz);
+    }
 
 
 
