@@ -14,7 +14,6 @@ import com.qzsang.baseproject.common.base.BaseActivity;
 import com.qzsang.baseproject.databinding.ActivityMainBinding;
 import com.qzsang.baseproject.databinding.ItemMainListBinding;
 import com.qzsang.baseproject.face.simple.BannerActivity;
-import com.qzsang.baseproject.face.simple.Main2Activity;
 import com.qzsang.baseproject.face.simple.SimpleActivity;
 import com.qzsang.baseproject.face.simple.SimpleDialogActivity;
 import com.qzsang.baseproject.face.simple.SimpleFragmentActivity;
@@ -40,7 +39,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
             new Pair("图片选择", SimpleImageSelActivity.class),
             new Pair("Banner", BannerActivity.class),
             new Pair("rxjava", SimpleRxjavaActivity.class),
-            new Pair("Main2Activity", Main2Activity.class),
 
     };
 

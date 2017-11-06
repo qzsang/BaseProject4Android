@@ -89,5 +89,4 @@ public class BBaseActivity<E extends ViewDataBinding> extends BBaseSwipeBackActi
     }
 
 
-
 }

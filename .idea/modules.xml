@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BaseProject4Android.iml" filepath="$PROJECT_DIR$/BaseProject4Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseLibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baseLibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swipeBackLibrary/SwipeBackLibrary.iml" filepath="$PROJECT_DIR$/swipeBackLibrary/SwipeBackLibrary.iml" />
     </modules>
   </component>
 </project>

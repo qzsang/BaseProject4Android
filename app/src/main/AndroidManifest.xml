@@ -34,7 +34,6 @@
         <activity android:name=".face.simple.SimpleImageSelActivity" />
         <activity android:name=".face.simple.BannerActivity" />
         <activity android:name=".face.simple.SimpleRxjavaActivity" />
-        <activity android:name=".face.simple.Main2Activity"></activity>
     </application>
 
 </manifest>

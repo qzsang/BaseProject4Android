@@ -51,18 +51,18 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile project(path: ':baselibrary')
+    compile project(path: ':baseLibrary')
     //noinspection GradleCompatible
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-
     //http://www.jianshu.com/p/5dd2a7a4e6aa  分包
     compile 'com.android.support:multidex:1.0.0'
+
 }
 
 

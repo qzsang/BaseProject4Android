@@ -58,7 +58,8 @@ dependencies {
 
 //    https://github.com/youth5201314/banner  banner
     compile 'com.youth.banner:banner:1.4.10'  //最新版本
-    //https://github.com/ikew0ng/SwipeBackLayout  模仿微信左滑退出
-    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
 
+
+    //https://github.com/ikew0ng/SwipeBackLayout  模仿微信左滑退出
+    compile project(':swipeBackLibrary')
 }
