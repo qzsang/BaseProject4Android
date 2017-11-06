@@ -57,4 +57,18 @@
         <item name="picture.folder_checked_dot">@drawable/orange_oval</item>
     </style>
 
+
+    <!--&lt;!&ndash;初步设置activity进入和退出的动画&ndash;&gt;-->
+    <!--<style name="activity_fade_in_out" parent="android:Animation.Activity">-->
+
+        <!--&lt;!&ndash; 新的Activity启动时Enter动画 &ndash;&gt;-->
+        <!--<item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>-->
+        <!--&lt;!&ndash; 新的Activity启动时原有Activity的Exit动画 &ndash;&gt;-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>-->
+        <!--&lt;!&ndash; 新的Activity退出时原有ActivityEnter动画 &ndash;&gt;-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>-->
+        <!--&lt;!&ndash; 新的Activity退出时Exit动画 &ndash;&gt;-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>-->
+    <!--</style>-->
+
 </resources>
