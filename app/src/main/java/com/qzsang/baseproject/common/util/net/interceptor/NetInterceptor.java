@@ -40,7 +40,7 @@ public class NetInterceptor extends InterceptorImpl {
         Request request = chain.request();
 
 
-        LogUtil.e("NetInterceptor request", isIntercept(request) + "");
+//        LogUtil.e("NetInterceptor request", isIntercept(request) + "");
        /* if (isIntercept(request)) {//   根据自己的业务进行封装
             Buffer buffer = new Buffer();
             request.body().writeTo(buffer);//得到数据

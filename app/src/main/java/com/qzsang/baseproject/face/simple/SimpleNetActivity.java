@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 import com.qzsang.baselibrary.util.FileUtil;
+import com.qzsang.baselibrary.util.LogUtil;
 import com.qzsang.baselibrary.util.net.NetUtil;
 import com.qzsang.baseproject.R;
 import com.qzsang.baseproject.common.base.BaseActivity;
@@ -94,7 +95,15 @@ public class SimpleNetActivity extends BaseActivity<ActivitySimpleNetBinding> {
 
                         }));
 
+                simpleService.testHttps()
+                        .compose(new SubscribeTransformer<String>(mContext, new NetSubscriber<String>() {
 
+                            @Override
+                            public void onNext(String response) {
+                                super.onNext(response);
+                                LogUtil.e("testHttps", response + "");
+                            }
+                        }));
 
 
             }

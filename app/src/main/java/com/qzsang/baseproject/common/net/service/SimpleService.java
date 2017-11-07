@@ -30,8 +30,10 @@ public interface SimpleService {
     @POST("getUser.do")
     Observable<RpUserBean> getUser(@Body RqUserBean userBean);
 
-    //下载
+    @POST("otn")//https://kyfw.12306.cn/otn/
+    Observable<String> testHttps();
 
+    //下载
     @Streaming
     @GET
     @Headers(InterceptorUtil.HEADER_FLAG_DNT_INTERCEPT_RESPONSE_BODY_CONTENT)  //让response不拦截
@@ -41,5 +43,8 @@ public interface SimpleService {
     @Multipart
     @POST("upload.do")
     Observable<String> upload(@Part MultipartBody.Part file);
+
+
+
 
 }

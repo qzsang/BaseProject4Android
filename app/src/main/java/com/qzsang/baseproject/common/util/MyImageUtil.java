@@ -1,15 +1,7 @@
 package com.qzsang.baseproject.common.util;
 
-import android.content.Context;
-import android.widget.ImageView;
-
-import com.qzsang.baselibrary.base.BBaseActivity;
-import com.qzsang.baselibrary.base.BBaseFragment;
-import com.qzsang.baselibrary.util.image.GlideApp;
 import com.qzsang.baselibrary.util.image.ImageUtil;
 import com.qzsang.baseproject.R;
-import com.qzsang.baseproject.common.base.BaseActivity;
-import com.qzsang.baseproject.common.base.BaseFragment;
 
 /**
  * Created by quezhongsang on 2017/10/16.
